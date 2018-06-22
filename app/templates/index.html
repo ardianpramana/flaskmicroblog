@@ -4,6 +4,8 @@
     <h1>Hello,
         {% if not current_user.username %}
             null_user
+        {% elif current_user.complete_name %}
+            {{ current_user.complete_name }}
         {% else %}
             {{ current_user.username }}
         {% endif %}
